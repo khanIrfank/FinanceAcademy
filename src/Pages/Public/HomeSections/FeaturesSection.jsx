@@ -8,25 +8,25 @@ const features = [
     icon: <Cpu className="w-6 h-6 text-gold-medium" />,
     title: "Algorithmic Precision Models",
     desc: "Harness quantitative indicators developed to identify deep bank liquidity pools and execution nodes.",
-    img: "/images/img_6.jpg"
+    img: "/images/feature1.jpg"
   },
   {
     icon: <BarChart3 className="w-6 h-6 text-gold-medium" />,
     title: "Live Volatility Mapping",
     desc: "Observe real-time asset flows across Major G10 currencies and benchmark equity sectors dynamically.",
-    img: "/images/img_7.jpg"
+    img: "/images/feature2.png"
   },
   {
     icon: <Target className="w-6 h-6 text-gold-medium" />,
     title: "Institutional Spread Optimization",
     desc: "Benefit from virtual routing designed to minimize simulated execution slippage and trade overrides.",
-    img: "/images/img_8.jpg"
+    img: "/images/feature3.jpg"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-gold-medium" />,
     title: "Advanced Drawdown Shields",
     desc: "Incorporate strict risk multipliers, capital caps, and automated hedging protocols into your trading.",
-    img: "/images/img_9.jpg"
+    img: "/images/feature4.jpg"
   },
   {
     icon: <Lock className="w-6 h-6 text-gold-medium" />,
@@ -38,7 +38,7 @@ const features = [
     icon: <Zap className="w-6 h-6 text-gold-medium" />,
     title: "Instant Commission Routing",
     desc: "Earned affiliate dividends are verified and dispatched immediately upon module sales activations.",
-    img: "/images/img_9.jpg"
+    img: "/images/feature6.jpg"
   }
 ]
 

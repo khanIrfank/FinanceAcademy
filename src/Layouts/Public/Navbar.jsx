@@ -24,7 +24,7 @@ const Navbar = () => {
     useEffect(() => {
         if (location.pathname !== '/') return
 
-        const sections = ['hero', 'markets', 'academy', 'news', 'ideas', 'contact']
+        const sections = ['hero', 'about', 'advantages', 'markets', 'academy', 'news', 'contact']
 
         const observerOptions = {
             root: null,
@@ -94,10 +94,12 @@ const Navbar = () => {
 
     const navLinks = [
         { id: 'hero', label: 'Home' },
+        { id: 'about', label: 'About' },
+        { id: 'ecosystem', label: 'Ecosystem' },
+        { id: 'advantages', label: 'Advantages' },
         { id: 'markets', label: 'Markets' },
         { id: 'academy', label: 'Academy' },
         { id: 'news', label: 'Market News' },
-        { id: 'ideas', label: 'Trading Ideas' },
         { id: 'contact', label: 'Contact' }
     ]
 
@@ -110,7 +112,7 @@ const Navbar = () => {
     return (
         <>
             <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${navBg}`}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-6">
                     <div className="flex items-center justify-between">
 
                         {/* Logo */}
@@ -136,7 +138,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden lg:flex items-center space-x-7">
+                        <div className="hidden xl:flex items-center space-x-7">
                             {navLinks.map((link) => {
                                 const isActive = activeSection === link.id && location.pathname === '/'
                                 return (
@@ -160,7 +162,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Actions */}
-                        <div className="hidden lg:flex items-center gap-3">
+                        <div className="hidden xl:flex items-center gap-3">
                             {/* Theme Toggle */}
                             <button
                                 onClick={toggleTheme}
@@ -199,7 +201,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile: theme toggle + hamburger */}
-                        <div className="lg:hidden flex items-center gap-2">
+                        <div className="xl:hidden flex items-center gap-2">
                             <button
                                 onClick={toggleTheme}
                                 className={`p-2 rounded-lg border transition-all cursor-pointer ${isDark
@@ -225,7 +227,7 @@ const Navbar = () => {
 
                 {/* Mobile menu drawer */}
                 <div
-                    className={`lg:hidden fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l backdrop-blur-xl shadow-2xl transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                    className={`xl:hidden fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l backdrop-blur-xl shadow-2xl transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
                         } ${isDark
                             ? 'bg-dark-950/95 border-gold-dark/20'
                             : 'bg-[#fdf8ef]/97 border-gold-dark/25'

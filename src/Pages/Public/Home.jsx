@@ -5,9 +5,13 @@ import { Users, UserCheck } from 'lucide-react'
 
 // Import modular sections
 import HeroSection from './HomeSections/HeroSection'
+import AboutSection from './HomeSections/AboutSection'
+import EcosystemSection from './HomeSections/EcosystemSection'
 import MarketsSection from './HomeSections/MarketsSection'
 import FeaturesSection from './HomeSections/FeaturesSection'
+import AdvantagesSection from './HomeSections/AdvantagesSection'
 import AcademySection from './HomeSections/AcademySection'
+import PortalSection from './HomeSections/PortalSection'
 import NewsSection from './HomeSections/NewsSection'
 import IdeasSection from './HomeSections/IdeasSection'
 import TestimonialsSection from './HomeSections/TestimonialsSection'
@@ -38,9 +42,13 @@ const Home = () => {
 
   // Ref nodes for GSAP ScrollTriggers
   const heroRef = useRef(null)
+  const aboutRef = useRef(null)
+  const ecosystemRef = useRef(null)
   const marketsRef = useRef(null)
   const featuresRef = useRef(null)
+  const advantagesRef = useRef(null)
   const academyRef = useRef(null)
+  const portalRef = useRef(null)
   const newsRef = useRef(null)
   const ideasRef = useRef(null)
   const testimonialsRef = useRef(null)
@@ -92,6 +100,40 @@ const Home = () => {
         }, '-=0.8')
     }, heroRef)
 
+    // Scroll trigger for About Section
+    gsap.fromTo(
+      '.about-card',
+      { opacity: 0, y: 30, scale: 0.95 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: 'top 80%',
+        }
+      }
+    )
+
+    // Scroll trigger for Ecosystem Section
+    gsap.fromTo(
+      '.ecosystem-card',
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: ecosystemRef.current,
+          start: 'top 80%',
+        }
+      }
+    )
+
     // Scroll trigger for Markets section
     gsap.fromTo(
       '.market-row',
@@ -127,6 +169,24 @@ const Home = () => {
       }
     )
 
+    // Scroll trigger for Advantages Section
+    gsap.fromTo(
+      '.whychoose-card',
+      { opacity: 0, scale: 0.9, y: 20 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.7,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: advantagesRef.current,
+          start: 'top 80%',
+        }
+      }
+    )
+
     // Scroll trigger for Academy
     gsap.fromTo(
       '.academy-card',
@@ -140,6 +200,23 @@ const Home = () => {
         scrollTrigger: {
           trigger: academyRef.current,
           start: 'top 75%',
+        }
+      }
+    )
+
+    // Scroll trigger for Portal Section
+    gsap.fromTo(
+      ['.portal-graphic', '#portal h2', '#portal p', '#portal li'],
+      { opacity: 0, x: -30 },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: portalRef.current,
+          start: 'top 80%',
         }
       }
     )
@@ -234,14 +311,26 @@ const Home = () => {
       {/* 1. HERO SECTION */}
       <HeroSection heroRef={heroRef} onJoinClick={() => setIsRegisterOpen(true)} />
 
+      {/* ABOUT SECTION (vision, mission, about company) */}
+      <AboutSection aboutRef={aboutRef} />
+
       {/* 2. LIVE MARKET WIDGET & TRADINGVIEW CHART */}
       <MarketsSection marketsRef={marketsRef} />
+
+      {/* INVESTMENT ECOSYSTEM */}
+      <EcosystemSection ecosystemRef={ecosystemRef} />
 
       {/* 3. PLATFORM FEATURES */}
       <FeaturesSection featuresRef={featuresRef} />
 
+      {/* ADVANTAGES SECTION */}
+      <AdvantagesSection advantagesRef={advantagesRef} />
+
       {/* 4. TRADING ACADEMY */}
       <AcademySection academyRef={academyRef} />
+
+      {/* REAL ESTATE & ONLINE PORTAL */}
+      <PortalSection portalRef={portalRef} />
 
       {/* 5. DAILY MARKET NEWS (Replacing Partner Network) */}
       <NewsSection newsRef={newsRef} />

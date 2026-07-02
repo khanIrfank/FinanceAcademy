@@ -32,19 +32,19 @@ const ContactSection = ({ contactRef }) => {
       icon: <Mail className="w-5 h-5 text-gold-medium" />,
       label: 'Email Us',
       value: 'support@darkhorse.finance',
-      sub: 'Response within 24 hours'
+      // sub: 'Response within 24 hours'
     },
     {
       icon: <Headphones className="w-5 h-5 text-gold-medium" />,
       label: 'Live Support',
       value: 'VIP Chat Desk',
-      sub: 'Available 24/5 — market hours'
+      // sub: 'Available 24/5 — market hours'
     },
     {
       icon: <MessageSquare className="w-5 h-5 text-gold-medium" />,
       label: 'Community',
       value: 'Traders Discord',
-      sub: '10,000+ active members'
+      // sub: '10,000+ active members'
     }
   ]
 
@@ -88,7 +88,7 @@ const ContactSection = ({ contactRef }) => {
                       {info.label}
                     </p>
                     <p className={`text-sm font-bold ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>{info.value}</p>
-                    <p className={`text-[10px] mt-0.5 ${isDark ? 'text-gray-600' : 'text-[#9a8060]'}`}>{info.sub}</p>
+                    {/* <p className={`text-[10px] mt-0.5 ${isDark ? 'text-gray-600' : 'text-[#9a8060]'}`}>{info.sub}</p> */}
                   </div>
                 </div>
               </Tilt>

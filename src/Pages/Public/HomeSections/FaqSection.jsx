@@ -7,28 +7,51 @@ const FaqSection = ({ faqRef }) => {
   const [activeIndex, setActiveIndex] = useState(null)
   const { isDark } = useTheme()
 
+  // const faqs = [
+  //   {
+  //     q: "What is Dark Horse Finance and how does it work?",
+  //     a: "Dark Horse Finance is a high-performance quantitative educational institute. We provide modular, institutional-grade modules in Forex, Stock Markets, and Algo trading indicators. Members can additionally participate in our voluntary Elite Partner Network to refer other students and earn residual network overrides."
+  //   },
+  //   {
+  //     q: "How does the Elite Partner Network referral commissions calculate?",
+  //     a: "Our network program runs on a multi-tier binary structure. You earn a 10% direct commission when your referred partner acquires any course tier. As your binary team balances match volume between the left and right wings, you receive an additional 8% override commission. Higher ranks unlock up to 2% global pool shares."
+  //   },
+  //   {
+  //     q: "Are the Daily Trading dividends guaranteed?",
+  //     a: "Daily dividends simulated on the calculator represent historical performances of our custom automated trading indicator pools. Past results do not guarantee future profits. Actual results fluctuate depending on interbank market liquidity, currency spreads, and general market volatility."
+  //   },
+  //   {
+  //     q: "Is there any charge to join the Partner Program?",
+  //     a: "Participation in the partner program is entirely optional. Standard account creation and community membership are free. However, unlocking specific reward commissions and modular academy classrooms requires acquiring the corresponding modular course packages starting at $100."
+  //   },
+  //   {
+  //     q: "How are withdrawals and referral points managed?",
+  //     a: "All network sales volumes, matching point registers, and course rewards are tracked transparently in real-time on our secure digital ledger. Withdrawals can be requested via supported secure banking channels or automated crypto gateways."
+  //   }
+  // ]
+
   const faqs = [
-    {
-      q: "What is Dark Horse Finance and how does it work?",
-      a: "Dark Horse Finance is a high-performance quantitative educational institute. We provide modular, institutional-grade modules in Forex, Stock Markets, and Algo trading indicators. Members can additionally participate in our voluntary Elite Partner Network to refer other students and earn residual network overrides."
-    },
-    {
-      q: "How does the Elite Partner Network referral commissions calculate?",
-      a: "Our network program runs on a multi-tier binary structure. You earn a 10% direct commission when your referred partner acquires any course tier. As your binary team balances match volume between the left and right wings, you receive an additional 8% override commission. Higher ranks unlock up to 2% global pool shares."
-    },
-    {
-      q: "Are the Daily Trading dividends guaranteed?",
-      a: "Daily dividends simulated on the calculator represent historical performances of our custom automated trading indicator pools. Past results do not guarantee future profits. Actual results fluctuate depending on interbank market liquidity, currency spreads, and general market volatility."
-    },
-    {
-      q: "Is there any charge to join the Partner Program?",
-      a: "Participation in the partner program is entirely optional. Standard account creation and community membership are free. However, unlocking specific reward commissions and modular academy classrooms requires acquiring the corresponding modular course packages starting at $100."
-    },
-    {
-      q: "How are withdrawals and referral points managed?",
-      a: "All network sales volumes, matching point registers, and course rewards are tracked transparently in real-time on our secure digital ledger. Withdrawals can be requested via supported secure banking channels or automated crypto gateways."
-    }
-  ]
+  {
+    q: "What is Dark Horse Institute and how does it work?",
+    a: "Dark Horse Institute is a high-performance quantitative educational hub. We provide modular, professional-grade training in Forex, Stock Markets, and algorithmic analytics tools. Students can additionally participate in our voluntary Elite Affiliate Network to introduce other learners and earn academic network rewards."
+  },
+  {
+    q: "How are the Elite Affiliate Network referral rewards calculated?",
+    a: "Our affiliate network runs on a structured, multi-tier enrollment model. You earn a 5% direct reward when a student you refer enrolls in any educational tier."
+  },
+  {
+    q: "Are the training results or simulated performance guaranteed?",
+    a: "No. Performance analytics simulated on our educational tools represent historical market trends and theoretical data. Past market conditions do not guarantee future outcomes. Actual market results fluctuate depending on interbank liquidity, currency spreads, and general macroeconomic volatility."
+  },
+  {
+    q: "Is there any charge to join the Affiliate Program?",
+    a: "Participation in our affiliate network is entirely optional. Initial student registration and access to basic community groups are free. However, unlocking advanced curriculum tracks, practical simulation classrooms, and their corresponding referral reward tiers requires enrolling in our core courses"
+  },
+  {
+    q: "How are educational rewards and referral points managed?",
+    a: "All academic enrollment volumes, structural tracking points, and educational rewards are registered transparently in real-time on our secure digital portal. Accumulated rewards can be processed securely through integrated banking networks or secure automated digital gateways."
+  }
+];
 
   const toggleFaq = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
