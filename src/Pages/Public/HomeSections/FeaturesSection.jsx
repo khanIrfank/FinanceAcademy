@@ -6,38 +6,38 @@ import { useTheme } from '../../../context/ThemeContext'
 const features = [
   {
     icon: <Cpu className="w-6 h-6 text-gold-medium" />,
-    title: "Algorithmic Precision Models",
-    desc: "Harness quantitative indicators developed to identify deep bank liquidity pools and execution nodes.",
+    title: "Algorithmic Pattern Concepts",
+    desc: "Learn about quantitative indicators used to study liquidity trends and market execution concepts.",
     img: "/images/feature1.jpg"
   },
   {
     icon: <BarChart3 className="w-6 h-6 text-gold-medium" />,
     title: "Live Volatility Mapping",
-    desc: "Observe real-time asset flows across Major G10 currencies and benchmark equity sectors dynamically.",
+    desc: "Observe real-time asset flows across major G10 currencies and benchmark equity sectors dynamically.",
     img: "/images/feature2.png"
   },
   {
     icon: <Target className="w-6 h-6 text-gold-medium" />,
-    title: "Institutional Spread Optimization",
-    desc: "Benefit from virtual routing designed to minimize simulated execution slippage and trade overrides.",
+    title: "Market Data Visualization",
+    desc: "Explore portfolio data concepts through visual analytics, charts, and performance breakdowns for educational study.",
     img: "/images/feature3.jpg"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-gold-medium" />,
-    title: "Advanced Drawdown Shields",
-    desc: "Incorporate strict risk multipliers, capital caps, and automated hedging protocols into your trading.",
+    title: "Risk Management Principles",
+    desc: "Understand strict risk multipliers, capital caps, and hedging concepts used in professional trading education.",
     img: "/images/feature4.jpg"
   },
   {
     icon: <Lock className="w-6 h-6 text-gold-medium" />,
-    title: "Encrypted Network Ledgers",
-    desc: "Sponsor associations and team volumes are recorded on high-security, tamper-proof system ledgers.",
+    title: "Secure Data Infrastructure",
+    desc: "User data and platform activity are recorded on high-security, tamper-proof systems, ensuring privacy and transparency.",
     img: "/images/img_10.jpg"
   },
   {
     icon: <Zap className="w-6 h-6 text-gold-medium" />,
-    title: "Instant Commission Routing",
-    desc: "Earned affiliate dividends are verified and dispatched immediately upon module sales activations.",
+    title: "Market Structure Overview",
+    desc: "Understand how market structures and price movements evolve across major financial hubs and asset classes.",
     img: "/images/feature6.jpg"
   }
 ]
@@ -56,10 +56,11 @@ const FeaturesSection = ({ featuresRef }) => {
           <Target className="w-3.5 h-3.5 text-gold-medium" /> Platform Intelligence
         </div>
         <h2 className={`text-3xl sm:text-4xl font-extrabold font-display ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-          Sophisticated Trading Infrastructure
+          Sophisticated Learning Infrastructure
         </h2>
         <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-          Elite trading requires institutional tools. Explore the high-performance modules integrated into the Dark Horse pipeline.
+          Understanding markets requires the right tools. Explore the educational
+          modules integrated into the Dark Horse platform.
         </p>
       </div>
 

@@ -6,54 +6,54 @@ import { useTheme } from '../../../context/ThemeContext'
 const ideas = [
   {
     title: "TOP Stocks for Second Half of 2026 – SPCX, AVGO and More",
-    desc: "In this post I'll be doing a stock market update for equities to look at in the second half of 2026. The strongest sector inflows...",
+    desc: "Excerpt: A look at equities showing strongest inflows this half, and what market structure suggests for the coming months...",
     img: "/images/img_13.jpg",
-    author: "Crypto-Check-",
+    author: "MarketMind_Dev",
     date: "Jun 19",
     comments: 22,
     likes: 71
   },
   {
-    title: "Bottom in October? Time, Trend, Valuation & Momentum Say Not Yet",
-    desc: "Bitcoin is at a very key support level — time, trend, valuation & momentum are not fully aligned yet. Here's a detailed breakdown...",
+    title: "Key Support Zones: Time, Trend & Momentum Breakdown",
+    desc: "Excerpt: Bitcoin sits near a notable support level — here's a breakdown of how time, trend, and momentum are lining up...",
     img: "/images/img_14.jpg",
-    author: "MBM_Crypto",
+    author: " ChartLogic_Ray",
     date: "Updated Jun 22",
     comments: 68,
     likes: 170
   },
   {
-    title: "SpaceX IPO Rocket Soars 20% in Public Debut. What Happens Next?",
-    desc: "SpaceX NASDAQ:SPCX finally arrived on the public markets and the debut looked a lot like one of its Falcon rocket liftoffs...",
+    title: "Public Debut Case Study: What a 20% IPO Pop Can Teach Us",
+    desc: "Excerpt: A recent IPO surge offers a useful case study in market reaction and post-listing volatility patterns...",
     img: "/images/img_15.jpg",
-    author: "TradingView",
+    author: "EquityEdge",
     date: "Jun 15",
     comments: 33,
     likes: 391
   },
   {
-    title: "Forex EUR/USD: Liquidity Grab Before Bullish Continuation",
-    desc: "EUR/USD has swept the lows and is showing signs of institutional accumulation. A strong bullish break above 1.10 would confirm...",
+    title: "Reading Candlestick Patterns Like a Pro",
+    desc: "Excerpt: Breaking down common reversal and continuation patterns every beginner should understand before analyzing charts...",
     img: "/images/img_14.jpg",
-    author: "FX_Institute",
+    author: "PatternPulse",
     date: "Jun 24",
     comments: 45,
     likes: 128
   },
   {
-    title: "Gold hits $2,450 – Is this the breakout institutions were waiting for?",
-    desc: "XAUUSD smashed through the $2,400 resistance on high volume. Central bank buying is accelerating and retail sentiment is lagging...",
+    title: "Title: Forex Pairs to Watch This Quarter",
+    desc: "Excerpt: A study of major currency pairs and the macro factors influencing short-term volatility across G10 currencies...",
     img: "/images/img_16.jpg",
-    author: "GoldBull2026",
+    author: "FXFocus_Dana",
     date: "Jun 21",
     comments: 57,
     likes: 244
   },
   {
-    title: "NVIDIA Q3 Earnings Preview: AI Demand Still Insatiable",
-    desc: "NVDA set to report quarterly earnings this week with analysts expecting another massive beat on AI chip demand from cloud giants...",
+    title: "Understanding Moving Average Crossovers",
+    desc: "A beginner-friendly explainer on how moving average crossovers are commonly interpreted in technical analysis...",
     img: "/images/img_17.jpg",
-    author: "TechQuant",
+    author: "TrendTactics",
     date: "Jun 18",
     comments: 81,
     likes: 302
@@ -127,10 +127,12 @@ const IdeasSection = ({ ideasRef }) => {
               <Activity className="w-3.5 h-3.5 text-gold-medium" /> Traders Lounge
             </div>
             <h2 className={`text-3xl sm:text-4xl font-extrabold font-display ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-              Community Trading Ideas
+              Community Market Insights
+
             </h2>
             <p className={`text-sm max-w-md leading-relaxed font-light ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-              Explore Editor's Picks and popular chart analyses uploaded by seasoned financial analysts.
+              Explore Editor's Picks and popular chart breakdowns shared by our learning
+              community — for educational discussion only.
             </p>
           </div>
 

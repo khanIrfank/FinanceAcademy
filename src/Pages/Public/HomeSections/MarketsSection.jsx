@@ -76,8 +76,9 @@ const MarketsSection = ({ marketsRef }) => {
             Real-Time Asset Classes &amp; Advanced Live Terminal
           </h2>
           <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-            Monitor instant volatility feeds across Forex, Stocks, and Cryptos, and run interactive strategies on our full-screen terminal.
-          </p>
+Track live price movements across Forex, Stocks, and Crypto — and explore 
+market behavior interactively on our live-data terminal, built for 
+learning and analysis.          </p>
         </div>
 
         {/* ─── TRADINGVIEW LIVE TICKER TAPE ─── */}

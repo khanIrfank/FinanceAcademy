@@ -23,8 +23,8 @@ const ContactSection = ({ contactRef }) => {
   }
 
   const inputCls = `w-full rounded-lg px-4 py-3 text-sm border outline-none transition-all duration-300 focus:ring-2 focus:ring-gold-medium/30 ${isDark
-      ? 'bg-dark-900/60 border-gold-dark/25 text-gray-200 placeholder-gray-600 focus:border-gold-medium/60'
-      : 'bg-white border-[#c4a86a]/50 text-[#1a1200] placeholder-[#b0956a] focus:border-gold-medium/70 focus:ring-gold-medium/20'
+    ? 'bg-dark-900/60 border-gold-dark/25 text-gray-200 placeholder-gray-600 focus:border-gold-medium/60'
+    : 'bg-white border-[#c4a86a]/50 text-[#1a1200] placeholder-[#b0956a] focus:border-gold-medium/70 focus:ring-gold-medium/20'
     }`
 
   const contactInfo = [
@@ -37,13 +37,13 @@ const ContactSection = ({ contactRef }) => {
     {
       icon: <Headphones className="w-5 h-5 text-gold-medium" />,
       label: 'Live Support',
-      value: 'VIP Chat Desk',
+      value: 'Chat Desk',
       // sub: 'Available 24/5 — market hours'
     },
     {
       icon: <MessageSquare className="w-5 h-5 text-gold-medium" />,
       label: 'Community',
-      value: 'Traders Discord',
+      value: 'Join Our Discord',
       // sub: '10,000+ active members'
     }
   ]
@@ -63,10 +63,11 @@ const ContactSection = ({ contactRef }) => {
             <MessageSquare className="w-3.5 h-3.5 text-gold-medium" /> Get In Touch
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold font-display ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-            Contact Our Elite Desk
+            Contact Our Support Desk
           </h2>
           <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-            Have questions about our academy modules, referral programs, or trading strategies? Our support team is ready to assist.
+            Have questions about our learning modules, platform features, or market
+            tools? Our support team is ready to assist.
           </p>
         </div>
 
@@ -77,8 +78,8 @@ const ContactSection = ({ contactRef }) => {
             {contactInfo.map((info, idx) => (
               <Tilt key={idx} tiltMaxAngleX={8} tiltMaxAngleY={8} perspective={1000} scale={1.02}>
                 <div className={`flex items-start gap-4 p-5 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${isDark
-                    ? 'border-gold-dark/20 bg-dark-900/60 glow-gold'
-                    : 'border-[#c4a86a]/50 bg-white shadow-md shadow-gold-dark/10'
+                  ? 'border-gold-dark/20 bg-dark-900/60 glow-gold'
+                  : 'border-[#c4a86a]/50 bg-white shadow-md shadow-gold-dark/10'
                   }`}>
                   <div className="w-10 h-10 rounded-xl bg-gold-dark/10 border border-gold-medium/20 flex items-center justify-center shrink-0">
                     {info.icon}
@@ -118,8 +119,8 @@ const ContactSection = ({ contactRef }) => {
           <div className="lg:col-span-8">
             <Tilt tiltMaxAngleX={4} tiltMaxAngleY={4} perspective={1200} scale={1.01}>
               <div className={`relative rounded-2xl border-2 p-8 overflow-hidden ${isDark
-                  ? 'border-gold-medium/20 bg-dark-900/70'
-                  : 'border-[#c4a86a]/55 bg-white shadow-xl shadow-gold-dark/12'
+                ? 'border-gold-medium/20 bg-dark-900/70'
+                : 'border-[#c4a86a]/55 bg-white shadow-xl shadow-gold-dark/12'
                 }`}>
 
                 {/* Background glow */}
@@ -218,8 +219,8 @@ const ContactSection = ({ contactRef }) => {
                     type="submit"
                     disabled={loading}
                     className={`w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-widest text-black transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${loading
-                        ? 'bg-gold-dark/60 cursor-wait'
-                        : 'bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light hover:brightness-110 shadow-lg shadow-gold-medium/20 hover:-translate-y-0.5'
+                      ? 'bg-gold-dark/60 cursor-wait'
+                      : 'bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light hover:brightness-110 shadow-lg shadow-gold-medium/20 hover:-translate-y-0.5'
                       }`}
                   >
                     {loading ? (

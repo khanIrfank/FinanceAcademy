@@ -4,14 +4,44 @@ import { DollarSign, ShieldAlert, Award, ArrowUpRight } from 'lucide-react'
 
 const CalculatorSection = ({ 
   calcRef, 
-  capital, setCapital, 
-  referrals, setReferrals, 
-  teamSize, setTeamSize,
-  calculatedDailyPayout,
-  calculatedDirectBonus,
-  calculatedTeamVolumeBonus,
-  totalMonthlyPotential
+  capital: propCapital, setCapital: propSetCapital, 
+  referrals: propReferrals, setReferrals: propSetReferrals, 
+  teamSize: propTeamSize, setTeamSize: propSetTeamSize,
+  calculatedDailyPayout: propCalculatedDailyPayout,
+  calculatedDirectBonus: propCalculatedDirectBonus,
+  calculatedTeamVolumeBonus: propCalculatedTeamVolumeBonus,
+  totalMonthlyPotential: propTotalMonthlyPotential
 }) => {
+  // Local fallback states if not provided as props
+  const [localCapital, setLocalCapital] = React.useState(1000)
+  const [localReferrals, setLocalReferrals] = React.useState(3)
+  const [localTeamSize, setLocalTeamSize] = React.useState(10)
+
+  const capital = propCapital !== undefined ? propCapital : localCapital
+  const setCapital = propSetCapital !== undefined ? propSetCapital : setLocalCapital
+
+  const referrals = propReferrals !== undefined ? propReferrals : localReferrals
+  const setReferrals = propSetReferrals !== undefined ? propSetReferrals : setLocalReferrals
+
+  const teamSize = propTeamSize !== undefined ? propTeamSize : localTeamSize
+  const setTeamSize = propSetTeamSize !== undefined ? propSetTeamSize : setLocalTeamSize
+
+  const calculatedDailyPayout = propCalculatedDailyPayout !== undefined 
+    ? propCalculatedDailyPayout 
+    : (capital * 0.015).toFixed(2)
+
+  const calculatedDirectBonus = propCalculatedDirectBonus !== undefined 
+    ? propCalculatedDirectBonus 
+    : (referrals * 500 * 0.10).toFixed(2)
+
+  const calculatedTeamVolumeBonus = propCalculatedTeamVolumeBonus !== undefined 
+    ? propCalculatedTeamVolumeBonus 
+    : (teamSize * 300 * 0.08).toFixed(2)
+
+  const totalMonthlyPotential = propTotalMonthlyPotential !== undefined 
+    ? propTotalMonthlyPotential 
+    : (parseFloat(calculatedDirectBonus) + (parseFloat(calculatedDailyPayout) * 30) + parseFloat(calculatedTeamVolumeBonus)).toFixed(2)
+
   // Compute basic percentages for the dynamic radial progress ring
   // Monthly multiplier calculation: (Monthly returns / Capital) * 100
   const monthlyReturnVal = parseFloat(calculatedDailyPayout) * 30

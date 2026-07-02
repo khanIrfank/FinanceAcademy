@@ -8,33 +8,33 @@ const AdvantagesSection = ({ advantagesRef }) => {
   const advantages = [
     {
       icon: <Shield className="w-6 h-6 text-gold-medium" />,
-      title: "Secure & Regulated",
-      desc: "Enterprise-grade security protocols, encryption keys, and custody structures safeguarding all digital assets and property deeds."
+      title: "SECURE & TRANSPARENT",
+      desc: "Enterprise-grade security protocols and encryption practices safeguarding all platform data and user information."
     },
     {
       icon: <Coins className="w-6 h-6 text-gold-medium" />,
-      title: "Multi-Asset Ecosystem",
-      desc: "A unified portal connecting Forex, Stocks, Cryptocurrencies, and Real Estate under a single, highly efficient investment gateway."
+      title: "MULTI-ASSET LEARNING ",
+      desc: "A unified portal connecting Forex, Stocks, Cryptocurrencies, and Real Estate education under a single, easy-to-navigate learning experience."
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-gold-medium" />,
-      title: "Transparent Metrics",
-      desc: "Audited ROI performance history, real-time visual charts, and complete ledger transparency for all matching commissions."
+      title: "TRANSPARENT DATA ",
+      desc: "Real-time visual charts and clear data presentation to support accurate market understanding."
     },
     {
       icon: <Users2 className="w-6 h-6 text-gold-medium" />,
-      title: "Binary Network Power",
-      desc: "Earn consistent dividends via binary matching overrides, rank achievements, and sponsor commissions linked worldwide."
+      title: "COMMUNITY LEARNING NETWORK",
+      desc: "Connect with a global community of learners exploring financial markets together through shared resources and discussions."
     },
     {
       icon: <Cpu className="w-6 h-6 text-gold-medium" />,
-      title: "Smart Trade Terminals",
-      desc: "Access automated ticker feeds, indicators, custom compounding calculators, and live TradingView analytics panels."
+      title: " SMART MARKET TOOLS",
+      desc: "Access live ticker feeds, indicators, calculators, and Trading View analytics panels for educational analysis."
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-gold-medium" />,
-      title: "Institutional Mentorship",
-      desc: "Accelerate your career through professional trading modules, masterclass curriculum, and interactive simulator labs."
+      title: "EXPERT-LED RESOURCES",
+      desc: "Accelerate your understanding through structured learning modules, curated curriculum, and interactive simulator tools."
     }
   ]
 
@@ -54,7 +54,7 @@ const AdvantagesSection = ({ advantagesRef }) => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center space-y-3 mb-16">
           <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gold-dark/10 border border-gold-medium/10 text-gold-dark text-[10px] font-bold uppercase tracking-widest">
@@ -64,20 +64,21 @@ const AdvantagesSection = ({ advantagesRef }) => {
             Why Choose Dark Horse
           </h2>
           <p className={`text-sm max-w-2xl mx-auto leading-relaxed ${isDark ? 'text-gray-400' : 'text-[#8a7050]'}`}>
-            Discover the structural and financial advantages that position our platform as a global leader in diversified asset ecosystems.
+            Discover the structural and educational advantages that position our
+            platform as a trusted resource for understanding diversified financial
+            markets.
           </p>
         </div>
 
         {/* Advantages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((item, index) => (
-            <div 
+            <div
               key={index}
-              className={`whychoose-card rounded-2xl border p-8 transition-all duration-300 relative group overflow-hidden ${
-                isDark 
-                  ? 'border-gold-dark/20 bg-dark-900/40 hover:border-gold-medium/40 hover:translate-y-[-4px] shadow-lg shadow-black/20' 
+              className={`whychoose-card rounded-2xl border p-8 transition-all duration-300 relative group overflow-hidden ${isDark
+                  ? 'border-gold-dark/20 bg-dark-900/40 hover:border-gold-medium/40 hover:translate-y-[-4px] shadow-lg shadow-black/20'
                   : 'border-gold-dark/25 bg-[#fdf8ef]/80 hover:border-gold-medium/50 hover:translate-y-[-4px] shadow-lg shadow-gold-dark/5'
-              }`}
+                }`}
             >
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-gold-dark/10 border border-gold-medium/20 flex items-center justify-center text-gold-light group-hover:scale-105 transition-transform duration-300">
@@ -92,7 +93,7 @@ const AdvantagesSection = ({ advantagesRef }) => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Subtle gold line on card hover */}
               <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-dark to-gold-light scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>

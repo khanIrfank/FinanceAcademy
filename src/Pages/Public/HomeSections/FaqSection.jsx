@@ -31,27 +31,27 @@ const FaqSection = ({ faqRef }) => {
   // ]
 
   const faqs = [
-  {
-    q: "What is Dark Horse Institute and how does it work?",
-    a: "Dark Horse Institute is a high-performance quantitative educational hub. We provide modular, professional-grade training in Forex, Stock Markets, and algorithmic analytics tools. Students can additionally participate in our voluntary Elite Affiliate Network to introduce other learners and earn academic network rewards."
-  },
-  {
-    q: "How are the Elite Affiliate Network referral rewards calculated?",
-    a: "Our affiliate network runs on a structured, multi-tier enrollment model. You earn a 5% direct reward when a student you refer enrolls in any educational tier."
-  },
-  {
-    q: "Are the training results or simulated performance guaranteed?",
-    a: "No. Performance analytics simulated on our educational tools represent historical market trends and theoretical data. Past market conditions do not guarantee future outcomes. Actual market results fluctuate depending on interbank liquidity, currency spreads, and general macroeconomic volatility."
-  },
-  {
-    q: "Is there any charge to join the Affiliate Program?",
-    a: "Participation in our affiliate network is entirely optional. Initial student registration and access to basic community groups are free. However, unlocking advanced curriculum tracks, practical simulation classrooms, and their corresponding referral reward tiers requires enrolling in our core courses"
-  },
-  {
-    q: "How are educational rewards and referral points managed?",
-    a: "All academic enrollment volumes, structural tracking points, and educational rewards are registered transparently in real-time on our secure digital portal. Accumulated rewards can be processed securely through integrated banking networks or secure automated digital gateways."
-  }
-];
+    {
+      q: "What is Dark Horse and how does it work?",
+      a: " Dark Horse is an educational platform focused on financial market literacy. We provide structured, modular learning content covering Forex, Stock Markets, Cryptocurrency, and Real Estate fundamentals — along with live market data tools to support hands-on learning and analysis."
+    },
+    {
+      q: "Is the educational content free to access?",
+      a: "We offer a mix of free and premium learning resources. Free content includes introductory modules and live market data, while premium modules offer deeper, structured curriculum on specific topics."
+    },
+    {
+      q: "Are the strategies or examples shown on the platform guaranteed to work in real markets?",
+      a: "All content, including charts, indicators, and strategy examples, is provided strictly for educational purposes. Markets are inherently unpredictable, and past performance or simulated examples do not guarantee future results."
+    },
+    {
+      q: "Do I need trading experience to join Dark Horse?",
+      a: "Not at all. Our modules are designed for learners at every level — from complete beginners to those looking to deepen their understanding of market structure and analysis."
+    },
+    {
+      q: "How can I track my learning progress?",
+      a: "Your dashboard shows completed lessons, modules in progress, and recommended next steps based on the topics you've explored.."
+    }
+  ];
 
   const toggleFaq = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
@@ -71,7 +71,8 @@ const FaqSection = ({ faqRef }) => {
           Frequently Answered Parameters
         </h2>
         <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-          Need details on academy curriculums, binary matching overrides, or system execution codes?
+          Need details on our learning modules, platform features, or how to get
+          started with Dark Horse?
         </p>
       </div>
 
@@ -133,14 +134,16 @@ const FaqSection = ({ faqRef }) => {
               <div className="relative z-20 p-2 space-y-3">
                 <div className="flex items-center gap-2">
                   <ShieldQuestion className="w-5 h-5 text-gold-medium" />
-                  <span className="text-xs uppercase font-bold tracking-widest text-white">Advisory Operations Desk</span>
+                  <span className="text-xs uppercase font-bold tracking-widest text-white">Learner Support Center</span>
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Our global client support center operates 24/5 in synchronization with standard institutional interbank hours. Link with our live support for advanced system metrics.
+                  Our support team is available to help with platform 
+navigation, module access, and general questions about our educational 
+resources.
                 </p>
 
                 <div className="pt-2 border-t border-gold-dark/10 flex items-center justify-between text-[10px] text-gold-light uppercase tracking-wider font-semibold">
-                  <span>Support Center: active</span>
+                  <span>SUPPORT CENTER: ACTIVE</span>
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
                 </div>
               </div>

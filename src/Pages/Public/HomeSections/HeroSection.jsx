@@ -108,19 +108,22 @@ const HeroSection = ({ heroRef, onJoinClick }) => {
         {/* Left Column */}
         <div className="lg:col-span-7 space-y-6 text-left">
           <div className="hero-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-dark/10 border border-gold-medium/20 text-gold-dark text-xs font-semibold uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 text-gold-dark animate-pulse" /> Next-Gen Wealth Protocol
+            <Zap className="w-3.5 h-3.5 text-gold-dark animate-pulse" />THINK SHARPER. TRADE SMARTER.
           </div>
 
           <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1]">
-            <span className={`block ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>Unleash Your</span>
+            <span className={`block ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>Unlock Your</span>
             <span className="block bg-gradient-to-r from-gold-light via-gold-medium to-gold-dark bg-clip-text text-transparent py-1">
               Financial Potential
             </span>
-            <span className={`block ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>With Elite Strategy</span>
+            <span className={`block ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>With Dark Horse</span>
           </h1>
 
           <p className={`hero-desc text-md sm:text-lg max-w-xl leading-relaxed font-light ${isDark ? 'text-gray-400' : 'text-[#6a5a38]'}`}>
-            Accelerate your portfolio performance in Real Estate, Forex, and Stock markets. Gain institutional intelligence, advanced strategy blueprints, and plug into our private wealth alliance.
+          Accelerate your market understanding across Real Estate, Forex, Crypto, and 
+Stock markets. Access research-driven insights, strategic learning resources, 
+and a growing community focused on financial literacy — for informational 
+and educational purposes only.
           </p>
 
           <div className="hero-ctas flex flex-wrap gap-4 pt-2">
@@ -140,13 +143,13 @@ const HeroSection = ({ heroRef, onJoinClick }) => {
                 : 'text-gold-dark border-gold-dark/40 bg-white/50 hover:bg-white/80 hover:border-gold-medium'
                 }`}
             >
-              Explore Academy
+              Explore INSIGHTS
             </button>
           </div>
 
           {/* Trust Badges */}
           <div className="flex flex-wrap gap-4 pt-4">
-            {['Regulated & Secure', 'Live Market Data', '10,000+ Members'].map(badge => (
+            {['EDUCATIONAL CONTENT ONLY ', 'LIVE MARKET DATA (Powered by TradingView)', '10,000+ Members'].map(badge => (
               <div key={badge} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span className={`text-[11px] font-semibold uppercase tracking-wider ${isDark ? 'text-gray-400' : 'text-[#8a7050]'}`}>{badge}</span>

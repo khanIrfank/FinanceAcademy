@@ -6,12 +6,12 @@ const PortalSection = ({ portalRef }) => {
   const { isDark } = useTheme()
 
   const bulletPoints = [
-    "Browse thousands of residential & commercial listings",
-    "Filter by location, price, ROI, and property type",
-    "Compare properties side-by-side with detailed analytics",
-    "Connect directly with verified sellers & agents",
-    "Track property value trends and market forecasts",
-    "Digital paperwork and secure online transactions"
+    "Explore thousands of residential & commercial listings for market study",
+    "Filter by location, price, and property type to understand market trends",
+    "Compare properties side-by-side with detailed analytics for learning purposes",
+    "Explore market data and connect with our learning community",
+    "Track property value trends and market forecasts for educational insight",
+    "Access digital resources and guides on property research fundamentals"
   ]
 
   return (
@@ -71,7 +71,7 @@ const PortalSection = ({ portalRef }) => {
                 Real Estate &amp; Online Portal
               </h2>
               <p className="text-gold-medium font-bold tracking-wider text-xs sm:text-sm uppercase">
-                Property Investment, Made Simple.
+                PROPERTY EDUCATION, MADE SIMPLE.
               </p>
             </div>
 

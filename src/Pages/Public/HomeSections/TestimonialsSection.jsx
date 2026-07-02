@@ -7,25 +7,25 @@ const TestimonialsSection = ({ testimonialsRef }) => {
   const { isDark } = useTheme()
   const reviews = [
     {
-      name: "Marcus Sterling",
-      role: "Founder, Capital Matrix Group",
+      name: "Mehta",
+      role: "Learning Community Member",
       rank: "Diamond Pegasus Rank",
       img: "/images/img_33.jpg",
-      text: "The institutional modules on Liquidity pools opened my eyes. We've structured a team of 40 active traders and scaled our commissions to unmatched levels."
+      text: "The modules on liquidity concepts really opened my eyes to how markets actually function.The structured approach made complex topics easy to follow."
     },
     {
-      name: "Elena Rostova",
-      role: "Quantitative Analyst",
+      name: "Ahuja",
+      role: "Learning Community Member",
       rank: "Gold Mustang Rank",
       img: "/images/img_34.jpg",
-      text: "The combination of high-end educational modules and binary networking is genius. It completely changes how we share strategies and generate side overrides."
+      text: "Combining educational content with hands-on chart practice completely changed how I approach market analysis. Highly recommend for beginners."
     },
     {
-      name: "Aidan Vance",
-      role: "Private Fund Manager",
+      name: "Verma",
+      role: "Learning Community Member",
       rank: "Dark Horse Elite Rank",
       img: "/images/img_35.jpg",
-      text: "Securing fractional shares of the Global Trading Pool dividends was my target. The platform has provided unmatched support, and transparency is at 100%."
+      text: "The transparency and depth of educational content here is unmatched. I've learned more about market structure in weeks than I expected."
     }
   ]
 
@@ -41,10 +41,12 @@ const TestimonialsSection = ({ testimonialsRef }) => {
             <Users className="w-3.5 h-3.5 text-gold-medium" /> Testimonials
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold font-display ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-            Endorsed by Elite Partners
+            What Our Learners Say
           </h2>
           <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-            Read how global networkers and retail students scaled their trading parameters and affiliate payouts.
+            Read how our community members have grown their market understanding
+            through Dark Horse's educational resources.
+
           </p>
         </div>
 

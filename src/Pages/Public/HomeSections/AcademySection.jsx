@@ -15,13 +15,14 @@ const AcademySection = ({ academyRef }) => {
 
         <div className="text-center space-y-3 mb-14">
           <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gold-dark/10 border border-gold-medium/10 text-gold-dark text-[10px] font-bold uppercase tracking-widest">
-            <BookOpen className="w-3.5 h-3.5 text-gold-medium" /> Institutional Curriculum
+            <BookOpen className="w-3.5 h-3.5 text-gold-medium" /> STRUCTURED LEARNING PATH
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold font-display ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-            Proprietary Trading Academy
+            Dark Horse Learning Modules
           </h2>
           <p className={`text-sm max-w-md mx-auto leading-relaxed ${isDark ? 'text-gray-500' : 'text-[#8a7050]'}`}>
-            Step-by-step modular education blueprints developed by Wall Street market makers and quantitative developers.
+            Step-by-step educational content designed to build your understanding of 
+market structure, one module at a time.
           </p>
         </div>
 
@@ -42,9 +43,10 @@ const AcademySection = ({ academyRef }) => {
               <div className="p-5 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
                   <span className="text-[9px] uppercase font-bold tracking-widest text-gold-medium">Module I</span>
-                  <h3 className="text-md font-bold text-white leading-snug">Forex Structure & Liquidity Pools</h3>
+                  <h3 className="text-md font-bold text-white leading-snug">Forex Structure & Liquidity Concepts</h3>
                   <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
-                    Learn direct order book flow, banking liquidity pools, interbank spreads, and advanced risk allocation matrices.
+                    Learn about order book flow, banking liquidity concepts, interbank 
+spreads, and risk allocation fundamentals.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-gold-dark/10 flex items-center justify-between">
@@ -73,7 +75,8 @@ const AcademySection = ({ academyRef }) => {
                   <span className="text-[9px] uppercase font-bold tracking-widest text-gold-medium">Module II</span>
                   <h3 className="text-md font-bold text-white leading-snug">Equities & Stock Market Mechanics</h3>
                   <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
-                    Analyze market capitalization, corporate earnings blueprints, options volatility, and growth stock triggers.
+                    Understand market capitalization, corporate earnings basics, options 
+volatility, and growth stock indicators.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-gold-dark/10 flex items-center justify-between">
@@ -102,7 +105,8 @@ const AcademySection = ({ academyRef }) => {
                   <span className="text-[9px] uppercase font-bold tracking-widest text-gold-medium">Module III</span>
                   <h3 className="text-md font-bold text-white leading-snug">Quantitative Algorithms & Indicators</h3>
                   <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
-                    Introduction to PineScript strategies, custom volume profiles, momentum oscillators, and automated execute portals.
+                    Introduction to scripting strategies, volume profiles, momentum 
+oscillators, and automated analysis tools.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-gold-dark/10 flex items-center justify-between">
@@ -129,9 +133,10 @@ const AcademySection = ({ academyRef }) => {
               <div className="p-5 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
                   <span className="text-[9px] uppercase font-bold tracking-widest text-gold-medium">Module IV</span>
-                  <h3 className="text-md font-bold text-white leading-snug">Risk Control & Capital Compounding</h3>
+                  <h3 className="text-md font-bold text-white leading-snug">Risk Awareness & Capital Principles</h3>
                   <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
-                    Master drawdowns limits, optimal leverage sizing, compounding reward multipliers, and portfolio hedged parameters.
+                    Understand drawdown limits, leverage concepts, compounding principles, 
+and portfolio risk fundamentals.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-gold-dark/10 flex items-center justify-between">

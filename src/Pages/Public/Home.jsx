@@ -5,19 +5,17 @@ import { Users, UserCheck } from 'lucide-react'
 
 // Import modular sections
 import HeroSection from './HomeSections/HeroSection'
-import AboutSection from './HomeSections/AboutSection'
-import EcosystemSection from './HomeSections/EcosystemSection'
-import MarketsSection from './HomeSections/MarketsSection'
+import StatsSection from './HomeSections/StatsSection'
 import FeaturesSection from './HomeSections/FeaturesSection'
-import AdvantagesSection from './HomeSections/AdvantagesSection'
-import AcademySection from './HomeSections/AcademySection'
-import PortalSection from './HomeSections/PortalSection'
-import NewsSection from './HomeSections/NewsSection'
-import IdeasSection from './HomeSections/IdeasSection'
-import TestimonialsSection from './HomeSections/TestimonialsSection'
 import CtaSection from './HomeSections/CtaSection'
-import FaqSection from './HomeSections/FaqSection'
 import ContactSection from './HomeSections/ContactSection'
+import MarketsSection from './HomeSections/MarketsSection'
+import EcosystemSection from './HomeSections/EcosystemSection'
+import AcademySection from './HomeSections/AcademySection'
+import NewsSection from './HomeSections/NewsSection'
+import TestimonialsSection from './HomeSections/TestimonialsSection'
+import AdvantagesSection from './HomeSections/AdvantagesSection'
+import FaqSection from './HomeSections/FaqSection'
 
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger)
@@ -28,47 +26,9 @@ const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', agree: false })
   const [showSuccessParticles, setShowSuccessParticles] = useState(false)
 
-  // Live markets simulated state
-  const [marketPrices, setMarketPrices] = useState([
-    { symbol: 'EUR/USD', name: 'Euro / US Dollar', price: 1.0924, change: 0.12, type: 'forex' },
-    { symbol: 'GBP/USD', name: 'Pound / US Dollar', price: 1.2742, change: -0.05, type: 'forex' },
-    { symbol: 'USD/JPY', name: 'US Dollar / Yen', price: 156.84, change: 0.38, type: 'forex' },
-    { symbol: 'AAPL', name: 'Apple Inc.', price: 189.87, change: 1.42, type: 'stock' },
-    { symbol: 'TSLA', name: 'Tesla Inc.', price: 174.60, change: -2.15, type: 'stock' },
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', price: 946.30, change: 4.86, type: 'stock' },
-    { symbol: 'BTC/USD', name: 'Bitcoin / USD', price: 67845.0, change: 1.25, type: 'crypto' },
-    { symbol: 'ETH/USD', name: 'Ethereum / USD', price: 3492.5, change: -0.44, type: 'crypto' },
-  ])
-
   // Ref nodes for GSAP ScrollTriggers
   const heroRef = useRef(null)
-  const aboutRef = useRef(null)
-  const ecosystemRef = useRef(null)
-  const marketsRef = useRef(null)
   const featuresRef = useRef(null)
-  const advantagesRef = useRef(null)
-  const academyRef = useRef(null)
-  const portalRef = useRef(null)
-  const newsRef = useRef(null)
-  const ideasRef = useRef(null)
-  const testimonialsRef = useRef(null)
-  const faqRef = useRef(null)
-  const contactRef = useRef(null)
-
-  // Handle live prices updates
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMarketPrices(prevPrices => 
-        prevPrices.map(item => {
-          const delta = (Math.random() - 0.5) * (item.price * 0.002)
-          const newPrice = Number((item.price + delta).toFixed(item.type === 'forex' ? 4 : 2))
-          const newChange = Number((item.change + (Math.random() - 0.5) * 0.2).toFixed(2))
-          return { ...item, price: newPrice, change: newChange }
-        })
-      )
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
 
   // Listen to open-register-modal custom events from Navbar
   useEffect(() => {
@@ -100,57 +60,6 @@ const Home = () => {
         }, '-=0.8')
     }, heroRef)
 
-    // Scroll trigger for About Section
-    gsap.fromTo(
-      '.about-card',
-      { opacity: 0, y: 30, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Ecosystem Section
-    gsap.fromTo(
-      '.ecosystem-card',
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: ecosystemRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Markets section
-    gsap.fromTo(
-      '.market-row',
-      { opacity: 0, x: -20 },
-      {
-        opacity: 1,
-        x: 0,
-        stagger: 0.08,
-        duration: 0.6,
-        ease: 'power1.out',
-        scrollTrigger: {
-          trigger: marketsRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
     // Scroll trigger for Features
     gsap.fromTo(
       '#features .glass-card',
@@ -165,126 +74,6 @@ const Home = () => {
         scrollTrigger: {
           trigger: featuresRef.current,
           start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Advantages Section
-    gsap.fromTo(
-      '.whychoose-card',
-      { opacity: 0, scale: 0.9, y: 20 },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.7,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: advantagesRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Academy
-    gsap.fromTo(
-      '.academy-card',
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: academyRef.current,
-          start: 'top 75%',
-        }
-      }
-    )
-
-    // Scroll trigger for Portal Section
-    gsap.fromTo(
-      ['.portal-graphic', '#portal h2', '#portal p', '#portal li'],
-      { opacity: 0, x: -30 },
-      {
-        opacity: 1,
-        x: 0,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: portalRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for News Section
-    gsap.fromTo(
-      '#news .glass-card',
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: newsRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Ideas Section
-    gsap.fromTo(
-      '#ideas .glass-card',
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: ideasRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for Testimonials
-    gsap.fromTo(
-      '#testimonials .glass-card',
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: testimonialsRef.current,
-          start: 'top 80%',
-        }
-      }
-    )
-
-    // Scroll trigger for FAQ
-    gsap.fromTo(
-      '#faq .glass-card',
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: 'power1.out',
-        scrollTrigger: {
-          trigger: faqRef.current,
-          start: 'top 85%',
         }
       }
     )
@@ -311,44 +100,34 @@ const Home = () => {
       {/* 1. HERO SECTION */}
       <HeroSection heroRef={heroRef} onJoinClick={() => setIsRegisterOpen(true)} />
 
-      {/* ABOUT SECTION (vision, mission, about company) */}
-      <AboutSection aboutRef={aboutRef} />
 
-      {/* 2. LIVE MARKET WIDGET & TRADINGVIEW CHART */}
-      <MarketsSection marketsRef={marketsRef} />
+      <MarketsSection/>
 
-      {/* INVESTMENT ECOSYSTEM */}
-      <EcosystemSection ecosystemRef={ecosystemRef} />
+      {/* 2. STATS SECTION */}
+      {/* <StatsSection /> */}
 
       {/* 3. PLATFORM FEATURES */}
+      <EcosystemSection/>
+
+      <AdvantagesSection/>
+
+     <AcademySection/>
+
+   <NewsSection/>
+
+
       <FeaturesSection featuresRef={featuresRef} />
 
-      {/* ADVANTAGES SECTION */}
-      <AdvantagesSection advantagesRef={advantagesRef} />
+      {/* 4. VIP CTA ACTION BANNER */}
 
-      {/* 4. TRADING ACADEMY */}
-      <AcademySection academyRef={academyRef} />
+      <TestimonialsSection/>
+    
+      <FaqSection/>
 
-      {/* REAL ESTATE & ONLINE PORTAL */}
-      <PortalSection portalRef={portalRef} />
-
-      {/* 5. DAILY MARKET NEWS (Replacing Partner Network) */}
-      <NewsSection newsRef={newsRef} />
-
-      {/* 6. COMMUNITY TRADING IDEAS (Replacing ROI Calculator) */}
-      <IdeasSection ideasRef={ideasRef} />
-
-      {/* 7. ELITE TESTIMONIALS */}
-      <TestimonialsSection testimonialsRef={testimonialsRef} />
-
-      {/* 8. VIP CTA ACTION BANNER */}
       <CtaSection onJoinClick={() => setIsRegisterOpen(true)} />
 
-      {/* 9. FREQUENTLY ANSWERED SUPPORT */}
-      <FaqSection faqRef={faqRef} />
-
-      {/* 10. CONTACT SECTION */}
-      <ContactSection contactRef={contactRef} />
+      {/* 5. CONTACT DESK SECTION */}
+      <ContactSection />
 
       {/* REGISTRATION MODAL */}
       {isRegisterOpen && (

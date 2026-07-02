@@ -32,13 +32,17 @@ const EcosystemSection = ({ ecosystemRef }) => {
                 <Layers className="w-3.5 h-3.5 text-gold-medium" /> Platform Structure
               </div>
               <h2 className={`text-3xl sm:text-5xl font-extrabold font-display leading-tight tracking-wide ${isDark ? 'text-white' : 'text-[#1a1200]'}`}>
-                Investment Ecosystem
+                Dark Horse Knowledge Ecosystem
               </h2>
               <p className="text-gold-medium font-bold tracking-wider text-xs sm:text-sm uppercase">
-                Multiple Sectors. One Business Vision.
+                MULTIPLE SECTORS. ONE LEARNING VISION.
               </p>
               <p className={`text-sm sm:text-base leading-relaxed ${isDark ? 'text-gray-400 font-normal' : 'text-[#5a4225] font-medium'}`}>
-                Dark Horse is envisioned as a diversified investment ecosystem designed to bring together multiple financial sectors under one unified platform. The objective is to create a strong business foundation that supports different investment domains while providing users with a centralized digital experience.
+                Dark Horse is envisioned as a diversified financial education ecosystem
+                designed to bring together learning resources from multiple market sectors
+                under one unified platform. The objective is to create a strong knowledge
+                foundation that supports understanding across different financial domains
+                while providing users with a centralized digital learning experience.
               </p>
             </div>
 
@@ -52,7 +56,9 @@ const EcosystemSection = ({ ecosystemRef }) => {
                     Real Estate
                   </h3>
                   <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-[#6a5030]'}`}>
-                    A sector focused on residential and commercial property opportunities, recognized as one of the most established asset classes for long-term value creation.
+                    A sector focused on residential and commercial property concepts,
+                    recognized as one of the most established asset classes for long-term
+                    value understanding and market study.
                   </p>
                 </div>
               </div>
@@ -65,7 +71,10 @@ const EcosystemSection = ({ ecosystemRef }) => {
                     Online Portal
                   </h3>
                   <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-[#6a5030]'}`}>
-                    A digital ecosystem designed to simplify everyday activities by bringing together various services and opportunities in one convenient environment, supporting a more connected and streamlined user experience.
+                    A digital ecosystem designed by Dark Horse to simplify access to learning
+                    resources by bringing together various educational tools and content in
+                    one convenient environment, supporting a more connected and streamlined
+                    user experience.
                   </p>
                 </div>
               </div>
@@ -78,7 +87,9 @@ const EcosystemSection = ({ ecosystemRef }) => {
                     Our Approach
                   </h3>
                   <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-[#6a5030]'}`}>
-                    Rather than focusing on a single market, Dark Horse is built around the concept of diversification, creating opportunities for future expansion across multiple investment sectors.
+                    Rather than focusing on a single market, Dark Horse is built around the
+                    concept of diversification in learning — creating resources for
+                    understanding multiple financial sectors and their fundamentals.
                   </p>
                 </div>
               </div>

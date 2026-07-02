@@ -6,7 +6,6 @@ import { useTheme } from '../../context/ThemeContext'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
-    const [activeSection, setActiveSection] = useState('hero')
     const navigate = useNavigate()
     const location = useLocation()
     const { isDark, toggleTheme } = useTheme()
@@ -14,72 +13,16 @@ const Navbar = () => {
     // Track scroll for background change
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
+            setScrolled(window.scrollY > 25)
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    // IntersectionObserver to track active section
-    useEffect(() => {
-        if (location.pathname !== '/') return
-
-        const sections = ['hero', 'about', 'advantages', 'markets', 'academy', 'news', 'contact']
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '-30% 0px -60% 0px',
-            threshold: 0
-        }
-
-        const observerCallback = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id)
-                }
-            })
-        }
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-        const timer = setTimeout(() => {
-            sections.forEach(id => {
-                const element = document.getElementById(id)
-                if (element) observer.observe(element)
-            })
-        }, 100)
-
-        return () => {
-            clearTimeout(timer)
-            sections.forEach(id => {
-                const element = document.getElementById(id)
-                if (element) observer.unobserve(element)
-            })
-        }
-    }, [location.pathname])
-
-    const scrollToSection = (id) => {
+    const handleNavClick = (path) => {
         setIsOpen(false)
-
-        if (location.pathname !== '/') {
-            navigate('/')
-            setTimeout(() => {
-                const element = document.getElementById(id)
-                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }, 300)
-            return
-        }
-
-        const element = document.getElementById(id)
-        if (element) {
-            const offset = 80
-            const bodyRect = document.body.getBoundingClientRect().top
-            const elementRect = element.getBoundingClientRect().top
-            const elementPosition = elementRect - bodyRect
-            const offsetPosition = elementPosition - offset
-
-            window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
-        }
+        navigate(path)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     const handleLoginClick = () => {
@@ -89,18 +32,26 @@ const Navbar = () => {
 
     const handleRegisterClick = () => {
         setIsOpen(false)
-        navigate('/register')
+        // Dispatches global event to open registration modal on Home page
+        if (location.pathname !== '/') {
+            navigate('/')
+            setTimeout(() => {
+                window.dispatchEvent(new CustomEvent('open-register-modal'))
+            }, 300)
+        } else {
+            window.dispatchEvent(new CustomEvent('open-register-modal'))
+        }
     }
 
     const navLinks = [
-        { id: 'hero', label: 'Home' },
-        { id: 'about', label: 'About' },
-        { id: 'ecosystem', label: 'Ecosystem' },
-        { id: 'advantages', label: 'Advantages' },
-        { id: 'markets', label: 'Markets' },
-        { id: 'academy', label: 'Academy' },
-        { id: 'news', label: 'Market News' },
-        { id: 'contact', label: 'Contact' }
+        { id: 'hero', label: 'Home', path: '/' },
+        { id: 'about', label: 'About', path: '/about' },
+        { id: 'ecosystem', label: 'Ecosystem', path: '/ecosystem' },
+        { id: 'advantages', label: 'Advantages', path: '/advantages' },
+        { id: 'markets', label: 'Markets', path: '/markets' },
+        { id: 'academy', label: 'Academy', path: '/academy' },
+        { id: 'news', label: 'Market News', path: '/news' },
+        { id: 'contact', label: 'Contact', path: '/contact' }
     ]
 
     const navBg = scrolled
@@ -118,7 +69,7 @@ const Navbar = () => {
                         {/* Logo */}
                         <div
                             className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
-                            onClick={() => scrollToSection('hero')}
+                            onClick={() => handleNavClick('/')}
                         >
                             <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gold-medium/30 bg-black flex items-center justify-center p-0.5 glow-gold">
                                 <img
@@ -140,13 +91,13 @@ const Navbar = () => {
                         {/* Desktop Navigation */}
                         <div className="hidden xl:flex items-center space-x-7">
                             {navLinks.map((link) => {
-                                const isActive = activeSection === link.id && location.pathname === '/'
+                                const isActive = location.pathname === link.path
                                 return (
                                     <button
                                         key={link.id}
-                                        onClick={() => scrollToSection(link.id)}
+                                        onClick={() => handleNavClick(link.path)}
                                         className={`relative py-2 text-xs font-semibold uppercase tracking-wider cursor-pointer transition-all duration-300 ${isActive
-                                            ? 'text-gold-dark text-glow'
+                                            ? 'text-gold-dark text-glow font-bold'
                                             : isDark
                                                 ? 'text-gray-400 hover:text-gold-light'
                                                 : 'text-[#6a5a38] hover:text-gold-dark'
@@ -227,7 +178,7 @@ const Navbar = () => {
 
                 {/* Mobile menu drawer */}
                 <div
-                    className={`xl:hidden fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l backdrop-blur-xl shadow-2xl transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                    className={`xl:hidden fixed  right-0 z-50 w-full max-w-xs border-l backdrop-blur-xl shadow-2xl transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
                         } ${isDark
                             ? 'bg-dark-950/95 border-gold-dark/20'
                             : 'bg-[#fdf8ef]/97 border-gold-dark/25'
@@ -254,13 +205,13 @@ const Navbar = () => {
 
                     <div className="px-6 py-8 flex flex-col space-y-5">
                         {navLinks.map((link) => {
-                            const isActive = activeSection === link.id && location.pathname === '/'
+                            const isActive = location.pathname === link.path
                             return (
                                 <button
                                     key={link.id}
-                                    onClick={() => scrollToSection(link.id)}
+                                    onClick={() => handleNavClick(link.path)}
                                     className={`text-left text-sm font-semibold uppercase tracking-wider transition-colors ${isActive
-                                        ? 'text-gold-light text-glow'
+                                        ? 'text-gold-light text-glow font-bold'
                                         : isDark
                                             ? 'text-gray-400 hover:text-gold-light'
                                             : 'text-[#6a5a38] hover:text-gold-dark'
